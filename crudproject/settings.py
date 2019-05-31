@@ -42,7 +42,6 @@ INSTALLED_APPS = [
     'board.apps.BoardConfig',
 
     'django.contrib.sites',
-    'disqus',
 ]
 
 MIDDLEWARE = [
