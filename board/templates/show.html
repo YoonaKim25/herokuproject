@@ -5,9 +5,6 @@
             <h1>제목: {{board.title}}</h1>
         </a>
         <p>내용: {{board.body}}</p>
-        <small class="text-muted">{{board.pub_date}}</small> 
-            <!-- Disqus Comments -->
-        {% load disqus_tags %}
-        {% disqus_show_comments %}     
+        <small class="text-muted">{{board.pub_date}}</small>    
     </div>
 {%endfor%}
