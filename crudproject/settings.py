@@ -53,6 +53,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware'
 ]
 
 ROOT_URLCONF = 'crudproject.urls'
@@ -124,3 +125,9 @@ USE_TZ = False
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
+
+# settings.py
+# # Heroku : Update database configuration from $DATABASE_URL.
+import dj_database_url
+db_from_env = dj_databse_url.config(conn_max_age=500)
+DATABASE['default'].update(db_from_env)
